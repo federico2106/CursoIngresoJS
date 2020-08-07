@@ -15,7 +15,8 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
+	txtIdNumero
+	txtIdIntentos
 	
 
 }

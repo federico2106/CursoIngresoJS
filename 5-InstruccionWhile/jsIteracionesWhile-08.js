@@ -1,19 +1,50 @@
-/*
+/*Linari Federico
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
-	var contador;
+	
+	var numeroIngresado;
 	var respuesta;
-	var sumaPositivos;
-	var multiplicacionNegativos;
-	contador=0;
-	sumaPositivos=0;
-	multiplicacionNegativos=1;
-	respuesta='si';
+	var numeroPositivo;
+	var multiplicarNegativo;
+	var bandera;
+	bandera=0;
 
+	
+	respuesta="si";
+	numeroPositivo=0;
+	multiplicarNegativo=1;
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
+	while(respuesta=="si")
+	
+	{
+		numeroIngresado= prompt("Ingrese un numero")
+		numeroIngresado= parseInt(numeroIngresado);
+		
+		if(numeroIngresado>=0)//preguntar como armarlo para no poner mayor que o menor que.
+		{
+			numeroPositivo= numeroPositivo+numeroIngresado;
+		}
+		else
+		{
+			bandera=1;
+			multiplicarNegativo= multiplicarNegativo*numeroIngresado;
+		}
+		respuesta= prompt("Quiere ingresar otro numero? si/no");
+	}
+	
+
+	if(bandera==0)
+	{
+		txtIdProducto.value=0;
+	}
+	
+	else
+	{
+		txtIdProducto.value=multiplicarNegativo;
+	}
+	txtIdSuma.value=numeroPositivo;
+	
 
 }//FIN DE LA FUNCIÓN

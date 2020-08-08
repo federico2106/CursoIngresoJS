@@ -101,7 +101,7 @@ cuantos menores de edad
 cuantos adolescentes de edad 
 la edad mas vieja;
 la edad mas joven;*/
-function mostrar()
+/*function mostrar()
 
 {
     var edad;
@@ -265,7 +265,7 @@ function mostrar()
 	document.write("hay una cantidad de mujeres adolescentes: "+contadorMujer+"<br>");
 	document.write("el promedio de edades de los hombres es:"+promedioHombres+"<br>");
 	document.write("el promedio de edades de las mujeres es:"+promedioMujeres+"<br>");
-}
+}*/
 
 /*
 
@@ -306,8 +306,325 @@ el nombre de la ultima persona con la mayor edad encontrada
 el nombre de la ultima persona con la menor edad encontrada
 
 */
+/*
+Enunciado  a)”bandera a full”
+de una cantidad de espectadores  indeterminada debemos tomar lo siguiente datos
+sexo
+altura
+edad
+nombre
+se debe informar:
+
+1-el nombre de la más alta de las mujeres
+2-el nombre del  más viejo de los hombres 
+3-el nombre del primer adolescente ingresado, (solo mostrar si y sólo si  hay  algún adolescente)
+NOTA:pedir datos por "prompt()" y mostrar por console.log()
+*/
+
+
+
+/*
+function mostrar()
+{
+
+	var sexo;
+	var altura;
+	var edad;
+	var nombre;
+	var respuesta;
+	var banderaNOmbreMujerMasAlta;
+	var banderaMasViejoHombre;
+	var banderaPrimerAdolescenteIngresado;
+	var nombreMujerMasAlta;
+	var mujerMasAlta;
+	var nombreMasViejo;
+	var viejo;
+	var nombrePrimerAdolescente;
+	var primerAdolescente;
+	var mensaje;
+	
+	respuesta="si";
+	banderaNOmbreMujerMasAlta=1;
+	banderaMasViejoHombre=1;
+	banderaNOmbreMujerMasAlta=1;
+	banderaPrimerAdolescenteIngresado=1;
+
+	
+	while(respuesta=="si")
+	{
+
+
+	
+
+		nombre= prompt("Ingrese su nombre:");
+		sexo=prompt("Ingrese F para Femenino o M para masculino");
+		while(sexo!="M" && sexo!="F")
+		{
+			sexo= prompt("error,reingrese M o F");
+			
+		}
+		altura= prompt("Ingrese su altura: ")
+		altura= parseFloat(altura);
+		while(altura<0 || isNaN(altura))
+		{
+		
+			altura= prompt("Error, reingrese su altura: ")
+			altura= parseFloat(altura);
+			
+		}
+
+		edad=prompt("Ingrese su edad:");
+		edad=parseInt(edad);
+		while(edad<1 || isNaN(edad)==true)
+		{
+			edad=prompt("Reingrese su edad: ");
+			edad=parseInt(edad);
+		}
+		
+		if(sexo=="F")
+		{
+
+
+		
+			if(banderaNOmbreMujerMasAlta==1)
+
+			{
+				mujerMasAlta=altura;
+				nombreMujerMasAlta=nombre;
+				banderaNOmbreMujerMasAlta=0;
+			}
+
+			
+			else
+			{
+				
+				if(mujerMasAlta<altura)
+				{
+					
+				mujerMasAlta=altura;
+				nombreMujerMasAlta=nombre;
+				}
+				
+
+			}
+			
+		
+			
+		
+
+			
+		}
+			else 
+			{
+			
+				if(banderaMasViejoHombre==1)
+				{
+					viejo=edad;
+					nombreMasViejo= nombre;
+					banderaMasViejoHombre=0;
+				}
+				else
+				{
+				
+					if(viejo<edad)
+					{
+						viejo=edad;
+				
+						nombreMasViejo= nombre;
+					}
+					
+				}
+			}
+		
+		if(edad>12 && edad<18)
+		{
+			if(banderaPrimerAdolescenteIngresado==1)
+			{
+			
+			primerAdolescente=edad;
+			nombrePrimerAdolescente=nombre;
+			banderaPrimerAdolescenteIngresado=0;
+			}
+			
+
+		}
+		
+		if(sexo!="F")
+		{
+			mensaje= "no se ingresaron mujeres";
+		}
+
+		respuesta= prompt("Quiere ingrersae de nuevo?");
+	}
+
+	
+
+	
+
+
+	console.log("el nombre de la mujer mas alta es: "+nombreMujerMasAlta+"<br>");
+	console.log("el nombre del mas viejo hombre mas alta es: "+nombreMasViejo+"<br>");
+	console.log(nombrePrimerAdolescente);
+	console.log(mensaje);
+}*/
+
+
+/*
+Enunciado b)”sin banderas”
+Se debe ingresar 10:
+nombre
+edad(0 y 115)
+altura(30 y 230)
+sexo
+Dinero(puede ser positivo o negativo, pero debe ser un número)
+CantidadDeHijos(0 y 10)
+despues de validar todos los datos,
+se debe informar:
+
+1- nombre de la persona con edad más vieja
+2- promedio de altura de las mujeres
+3- nombre de la mujer más joven
+NOTA:pedir datos por "prompt()" y mostrar por console.log(),
+verificar que los datos  exitan antes de mostrarlos*/
+/*
+function mostrar()
+{
+
+	var sexo;
+	var altura;
+	var edad;
+	var nombre;
+	var i;
+	var dinero;
+	var cantidadDeHIjos;
+	var banderaMasViejo;
+	var viejo;
+	var acumuladorMujerAltura;
+	var contadorAlturaMujer;
+	var promedio;
+	var banderaMujeroMasJoven;
+	var NombreMujerMasJoven;
+	banderaMasViejo=1;
+	contadorAlturaMujer=0;
+	i=0;
+	acumuladorMujerAltura=0;
+	contadorAlturaMujer=0;
+	banderaMujeroMasJoven=1;
+	
+	
+	
+	for(i=0;i<10;i++)
+	{
+		
+		
+		
+
+			nombre= prompt("Ingrese su nombre:");
+			edad= prompt("Ingrese su edad: ");
+			edad= parseInt(edad);
+			while(edad<0 && edad>115 || isNaN(edad))
+			{
+				edad= prompt("Error, reingrese su edad: ");
+				edad= parseInt(edad);
+			}
+
+			sexo=prompt("Ingrese F para Femenino o M para masculino");
+			
+			while(sexo!="M" && sexo!="F")
+			{
+				sexo= prompt("error,reingrese M o F");	
+			}
+
+			altura= prompt("Ingrese su altura: ");
+			altura= parseFloat(altura);
+			while(altura<30 && altura>230 || isNaN(altura))
+			{
+				altura= prompt("Error, reingrese su altura: ");
+				altura= parseFloat(altura);
+			}
+			dinero= prompt("Ingrese cantidad de dinero: ");
+			dinero= parseFloat(dinero);
+			while(isNaN(dinero))
+			{
+				dinero= prompt("Error reingrese cantidad de dinero: ");
+				dinero= parseFloat(dinero);
+			}
+			cantidadDeHIjos= prompt("Ingrese la cantidad de hijos:");
+			cantidadDeHIjos= parseInt(cantidadDeHIjos);
+			
+			while(cantidadDeHIjos<-1 && cantidadDeHIjos>10)
+			{
+				cantidadDeHIjos= prompt("Error reingrese la cantidad de hijos:");
+				cantidadDeHIjos= parseInt(cantidadDeHIjos);
+			}
+			
+		if(banderaMasViejo==1)
+		{
+			viejo=edad;
+			nombreMAsViejo= nombre;
+			banderaMasViejo=0;
+			
+		}
+		
+		else
+		{
+			if(viejo<edad)
+			{
+				viejo=edad;
+				nombreMAsViejo= nombre;
+			}
+		}
+		//2- promedio de altura de las mujeres
+		
+		if(sexo=="F")
+		{
+			
+			acumuladorMujerAltura=altura+acumuladorMujerAltura;
+			contadorAlturaMujer==contadorAlturaMujer++;
+		}
+		
+			
+		if(sexo=="F")
+		{
+
+
+		
+			if(banderaMujeroMasJoven==1)
+
+			{	
+				mujerMasJoven=edad;
+				NombreMujerMasJoven=nombre;
+				banderaMujeroMasJoven=1;
+				
+			}
+
+			
+			else
+			{
+				
+				if(mujerMasAlta<altura)
+				{
+					mujerMasJoven=edad;
+					NombreMujerMasJoven=nombre;
+				}
+			}	
+		}
+	}
 
 
 
 
 
+	promedio=acumuladorMujerAltura/contadorAlturaMujer;
+	document.write(nombreMAsViejo+"<br>");
+	document.write(promedio+"<br>");
+	document.write(NombreMujerMasJoven);
+
+
+
+
+
+
+
+
+}*/

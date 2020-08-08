@@ -13,5 +13,25 @@ f) El tipo mas caro
 */
 function mostrar()
 {
-  alert("dos");
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
